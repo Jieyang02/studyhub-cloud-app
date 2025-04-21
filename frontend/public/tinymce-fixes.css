@@ -1,0 +1,255 @@
+/**
+ * TinyMCE Z-index fixes
+ * These styles fix z-index issues with TinyMCE modals and dialogs
+ */
+
+/* Ensure TinyMCE dialog modals are above other content */
+.tox-dialog-wrap {
+  z-index: 2000 !important;
+  position: fixed !important;
+}
+
+/* Fix the modal backdrop */
+.tox-dialog-wrap__backdrop {
+  z-index: 1900 !important;
+}
+
+/* Make sure the actual dialog has proper z-index */
+.tox-dialog {
+  z-index: 2000 !important;
+  position: absolute !important;
+}
+
+/* Fix positioning for dialog box */
+.tox-dialog-wrap .tox-dialog {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Ensure dropdown menus appear above other content */
+.tox-menu,
+.tox-collection--list,
+.tox-collection--grid {
+  z-index: 2100 !important;
+}
+
+/* Critical fix for image dialog input fields */
+.tox-form__group input[type='text'],
+.tox-form__group input[type='url'],
+.tox-form__group input[type='number'],
+.tox-form__group textarea,
+.tox-form__group select,
+.tox-form__group button,
+.tox-form__group .tox-listbox,
+.tox-form__group .tox-textarea,
+.tox-form__group .tox-textfield,
+.tox-form__group .tox-toolbar-textfield {
+  z-index: auto !important;
+  position: relative !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure form controls are clickable */
+.tox-form {
+  position: relative !important;
+  z-index: 2010 !important;
+}
+
+/* Dialog body elements need to be accessible */
+.tox-dialog__body-content {
+  position: relative !important;
+  z-index: 2010 !important;
+  overflow: visible !important;
+}
+
+/* Ensure toolbar items are clickable */
+.tox-toolbar,
+.tox-toolbar__group,
+.tox-toolbar__primary {
+  z-index: 1 !important;
+}
+
+/* Fix for context menus */
+.tox-silver-sink {
+  z-index: 2200 !important;
+  position: fixed !important;
+}
+
+/* TinyMCE dialog z-index fixes */
+.tox-tinymce-aux {
+  z-index: 2200 !important; /* Higher than Material-UI dialogs */
+}
+
+.tox-dialog__header,
+.tox-dialog__footer,
+.tox-dialog__body,
+.tox-dialog__body-nav,
+.tox-form,
+.tox-button,
+.tox-textfield,
+.tox-listboxfield {
+  z-index: 2050 !important;
+}
+
+/* Make TinyMCE dialogs fully accessible */
+.tox-dialog input[type='text'],
+.tox-dialog input[type='checkbox'],
+.tox-dialog input[type='number'],
+.tox-dialog input[type='submit'],
+.tox-dialog button,
+.tox-dialog select,
+.tox-dialog textarea {
+  z-index: 2060 !important;
+  position: relative !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure proper stacking of image editing tools */
+.tox-image-tools {
+  z-index: 2070 !important;
+}
+
+.tox-image-tools__toolbar {
+  z-index: 2080 !important;
+}
+
+/* Fix sizing of images in editor */
+.mce-content-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Highlight selected images better */
+.mce-content-body img[data-mce-selected] {
+  outline: 2px solid #2276d2 !important;
+  outline-offset: 2px;
+}
+
+/* Improve visibility of resize handles */
+.tox-control-wrap__status-icon-wrap {
+  z-index: 2090 !important;
+}
+
+/* Ensure proper display of dialog controls */
+.tox-collection--toolbar .tox-collection__item {
+  z-index: 2100 !important;
+}
+
+/* Ensure toolbar items remain clickable */
+.tox-toolbar__group {
+  z-index: 1400 !important;
+}
+
+/* Specific fix for the URL and other fields in image dialog */
+.tox-form__grid {
+  position: relative !important;
+  z-index: 2050 !important;
+}
+
+.tox-form__grid input,
+.tox-form__grid .tox-label {
+  position: relative !important;
+  z-index: 2060 !important;
+  pointer-events: auto !important;
+}
+
+/* Fix for tab panels in image dialog */
+.tox-tab,
+.tox-dialog__body-nav-item {
+  position: relative !important;
+  z-index: 2050 !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure checkboxes and their labels are clickable */
+.tox-checkbox__input,
+.tox-checkbox__label {
+  position: relative !important;
+  z-index: 2060 !important;
+  pointer-events: auto !important;
+}
+
+/* Fix for color picker in text color dialog */
+.tox-swatches {
+  position: relative !important;
+  z-index: 2070 !important;
+}
+
+.tox-swatch {
+  position: relative !important;
+  z-index: 2080 !important;
+  pointer-events: auto !important;
+}
+
+/* TinyMCE Fixes for Material UI Integration */
+
+/* Fix z-index issues with Material UI dialogs */
+.tox-tinymce-aux {
+  z-index: 1400 !important; /* Override default z-index to be above MUI dialogs */
+}
+
+.tox-silver-sink {
+  z-index: 1400 !important; /* Override default z-index to be above MUI dialogs */
+}
+
+/* Ensure TinyMCE dialogs are above other Material UI components */
+.tox-dialog-wrap {
+  z-index: 1401 !important;
+}
+
+.tox-dialog__header {
+  padding: 12px 16px !important;
+}
+
+.tox-dialog__body {
+  padding: 16px !important;
+}
+
+.tox-dialog__footer {
+  padding: 12px 16px !important;
+}
+
+/* Fix for TinyMCE selectors in fullscreen mode */
+.tox.tox-tinymce.tox-fullscreen {
+  z-index: 1300 !important;
+}
+
+/* Adjust TinyMCE toolbar appearance to match Material UI */
+.tox .tox-toolbar__group {
+  padding: 2px 4px !important;
+}
+
+.tox .tox-tbtn {
+  margin: 2px !important;
+}
+
+/* Fix focus outline styles to be consistent with Material UI */
+.tox .tox-tbtn:focus:not(.tox-tbtn--disabled) {
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.5) !important;
+}
+
+/* Adjustments for tooltip layer to be above MUI components */
+.tox .tox-tooltip {
+  z-index: 1500 !important;
+}
+
+/* Fix for editor content area to align with Material UI */
+.tox-edit-area {
+  padding: 0 !important;
+}
+
+.tox-edit-area__iframe {
+  border-radius: 0 0 4px 4px !important;
+}
+
+/* Ensure proper cleanup of editor when hidden or unmounted */
+.hidden-editor {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
