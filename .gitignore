@@ -12,6 +12,11 @@ node_modules/
 
 # Firebase
 serviceAccountKey.json
+service-account-key.json
+**/service-account-key.json
+**/serviceAccountKey.json
+/backend/service-account-key.json
+/backend/serviceAccountKey.json
 
 # Python
 __pycache__/
