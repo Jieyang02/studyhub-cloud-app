@@ -1,0 +1,17 @@
+runtime: python39 # Using Python 3.9 runtime
+
+env_variables:
+  CORS_ORIGIN: 'https://studyhub-cloud-app.web.app,https://studyhub-cloud-app.firebaseapp.com,http://localhost:3000'
+  GOOGLE_APPLICATION_CREDENTIALS: './service-account-key.json'
+
+handlers:
+  - url: /.*
+    script: auto
+
+# Add to your app.yaml
+resources:
+  cpu: 1
+  memory_gb: 1
+  disk_size_gb: 10
+
+entrypoint: cd app && uvicorn main:app --host=0.0.0.0 --port=$PORT

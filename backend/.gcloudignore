@@ -1,0 +1,11 @@
+.git
+.gitignore
+.env
+.env.local
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
