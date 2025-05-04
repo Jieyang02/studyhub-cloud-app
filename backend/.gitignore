@@ -11,4 +11,4 @@ env/
 .env
 
 # Firebase
-# service-account-key.json
+service-account-key.json
